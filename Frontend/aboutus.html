@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CareFirst Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: #f7fdfc;
+            color: #333;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Hero Section */
+        .hero-about {
+            background: linear-gradient(to right, #A7C7E7, #A8DAD9), url('images/care.jfif') no-repeat center/cover;
+            color: white;
+            height: 90vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            padding: 0 50px;
+        }
+
+        .hero-abouttext {
+            max-width: 50%;
+            text-align: left;
+        }
+
+        .hero-image {
+            width:500px;
+            height:250px;
+        }
+
+        /* Section Container for Text and Image Layout */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        /* Box Layout for Each Content Section */
+        .content-box {
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            flex: 1;
+        }
+
+        .content-box img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Mission Section with Gradient Background */
+        .mission {
+            background: linear-gradient(to right, #e0f2f1, #ffffff);
+            padding: 50px 20px;
+        }
+
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .hero-about {
+                flex-direction: column;
+                justify-content: center;
+                height: auto;
+            }
+
+            .hero-abouttext {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .hero-image {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/carefirstguide.jpeg" alt="Care First Guide Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="numbers.html">Numbers</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn">LogOut</a>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-about">
+        <div class="hero-abouttext">
+            <h1>Welcome to CareFirst Guide</h1>
+            <p>Your trusted companion on the journey to healing and well-being</p>
+            <p>We believe in a holistic approach to wellness, where emotional, physical, and spiritual health are
+                interconnected.</p>
+            <p>Join us in exploring the path to a healthier, happier you.</p>
+            <a href="home.html" class="btn"
+                style="background-color: #2b7a78; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Get
+                Started</a>
+            <a href="#story" class="btn"
+                style="background-color: white; color: #2b7a78; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Learn
+                More</a>
+
+
+        </div>
+        <div class="hero-image">
+            <img src="images/helaing2.jfif" alt="Healing Image">
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story">
+        <h2 style="text-align: center; margin-bottom: 40px;">Our Story</h2>
+        <div class="container">
+            <div class="content-box">
+                <img src="images/story.jfif" alt="Our Story Image">
+              
+            </div>
+            <div class="content-box">
+                <p>
+                    At CareFirst Guide, our journey began with a simple belief: Healing is not just about treatment.
+                    It's about connection, compassion, and courage.
+                    We realized that while the world offers plenty of information, very few platforms truly care about a
+                    person’s emotional and holistic well-being.
+                    CareFirst Guide was born — a safe space built with empathy, science, and soul.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="mission">
+        <h2 style="text-align: center; margin-bottom: 40px;">Our Mission</h2>
+        <div class="container">
+            <div class="content-box">
+                <p>
+                    To empower individuals to heal, grow, and thrive — emotionally, physically, and spiritually —
+                    through knowledge, care, and authentic guidance.
+                    We believe in delivering trusted, high-quality, and compassionate support to your wellness journey.
+                </p>
+            </div>
+            <div class="content-box">
+                <img src="images/mission.jfif" alt="Mission Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section>
+        <h2 style="text-align: center; margin-bottom: 40px;">Our Core Values</h2>
+        <div class="container">
+            <div class="content-box">
+                <img src="images/compassion.jfif" alt="Compassion" style="width: 50px;">
+                <h3>🌱Compassion</h3>
+                <p>We embrace empathy, kindness, and understanding in everything we do.</p>
+            </div>
+            <div class="content-box">
+                <img src="images/trust.jfif" alt="Trust" style="width: 50px;">
+                <h3>🤝Trust</h3>
+                <p>We prioritize building relationships grounded in trust and transparency.</p>
+            </div>
+            <div class="content-box">
+                <img src="images/inspiration.jfif" alt="Inspiration" style="width: 50px;">
+                <h3>🌟Inspiration</h3>
+                <p>We aim to inspire positive change in the lives of others.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section>
+        <h2 style="text-align: center; margin-bottom: 40px;">What We Offer</h2>
+        <div class="container">
+            <div class="content-box">
+                <img src="images/wellness.jfif" alt="Wellness Articles">
+                <h3>💬Wellness Articles</h3>
+                <p>Trusted, research-based articles to guide your wellness journey.</p>
+            </div>
+            <div class="content-box">
+                <img src="images/mindful.jfif" alt="Mindfulness Tips">
+                <h3>🧘‍♀️Mindfulness Tips</h3>
+                <p>Practical tips for daily mindfulness and mental well-being.</p>
+            </div>
+            <div class="content-box">
+                <img src="images/hoilistic.jfif" alt="Holistic Healing Guides">
+                <h3>🌿Holistic Healing Guides</h3>
+                <p>Comprehensive resources to heal the body, mind, and spirit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Left Section: Copyright & Info -->
+            <div class="footer-left">
+                <p>&copy; 2023 Care First Guide. All rights reserved.</p>
+                <p>Providing expert first aid information and resources.</p>
+            </div>
+
+            <!-- Middle Section: Quick Links -->
+            <div class="footer-middle">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Section: Social Icons and Contact Info -->
+            <div class="footer-right">
+                <h4>Stay Connected</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                    <a href="#" target="_blank"><img src="images/linkedin.png" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+                <h5>Contact Us:</h5>
+                <p>Email: <a href="mailto:info@carefirstguide.com">info@carefirstguide.com</a></p>
+                <p>Phone: +1 (234) 567-890</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
