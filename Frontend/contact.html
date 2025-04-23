@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us | CareFirstGuide</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/carefirstguide.jpeg" alt="Care First Guide Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="numbers.html">Numbers</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn">LogOut</a>
+        </div>
+    </header>
+
+     <!-- Contact Form Section -->
+     <div class="contactform-container">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="POST">
+            <!-- Name Field -->
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+            <!-- Email Field -->
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+            <!-- Message Field -->
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Additional Message -->
+        <p>We'll get back to you as soon as possible!</p>
+    </div>
+
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-content">
+        <!-- Left Section: Copyright & Info -->
+        <div class="footer-left">
+            <p>&copy; 2023 Care First Guide. All rights reserved.</p>
+            <p>Providing expert first aid information and resources.</p>
+        </div>
+
+        <!-- Middle Section: Quick Links -->
+        <div class="footer-middle">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section: Social Icons and Contact Info -->
+        <div class="footer-right">
+            <h4>Stay Connected</h4>
+            <div class="social-icons">
+                <a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="images/linkedin.png" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <h5>Contact Us:</h5>
+            <p>Email: <a href="mailto:info@carefirstguide.com">info@carefirstguide.com</a></p>
+            <p>Phone: +1 (234) 567-890</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
