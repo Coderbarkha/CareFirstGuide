@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bleeding tutorial</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.step {
+  display: none;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+  overflow: hidden; /* ensures no content overflows */
+  position: relative; /* ensures z-index works */
+}
+
+.step img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto 10px auto; /* add bottom margin so button doesn't go under */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.step button {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+img {
+    width: 40%;
+    height: 40%;
+    margin-top: 10px;
+}
+
+#finish {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <h1>Bleeding Tutorial</h1>
+        <div class="step" id="step1">
+            <p>Step 1: Apply direct pressure to the wound.</p>
+            <img src="images/bleedingstep1.jpeg" alt="Step 1 Image" />
+            <button onclick="nextStep(2)">Next Step</button>
+          </div>
+          
+          <div class="step" id="step2">
+            <p>Step 2: If bleeding does not stop, add more cloths without removing the first one.</p>
+            <img src="images/bleedingstep2.jpeg" alt="Step 2 Image" />
+            <button onclick="nextStep(3)">Next Step</button>
+          </div>
+          
+          <div class="step" id="step3">
+            <p>Step 3: Elevate the injured area above the heart if possible.</p>
+            <img src="images/bleedingstep3.jpeg" alt="Step 3 Image" />
+            <button onclick="nextStep(4)">Next Step</button>
+          </div>
+          
+          <div class="step" id="step4">
+            <p>Step 4: If bleeding is severe, seek emergency medical help immediately.</p>
+            <img src="images/bleedingstep4.jpeg" alt="Step 4 Image" />
+            <button onclick="finishTutorial()">Finish Tutorial</button>
+          </div>
+          
+          <div class="step" id="finish">
+            <h2>🎉 Congratulations! You have completed the tutorial.</h2>
+            <button onclick="restartTutorial()">Restart Tutorial</button>
+          </div>
+
+                 <!-- Video Section -->
+<section class="video-section">
+    <h2>Watch: Bleeding first aid in </h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8pTaqY40-Rs?si=UNhNnz3xEgnXWVxr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+    </div>
+          
+    </div>
+    <script>
+        let currentStep = 1;
+        document.getElementById('step' + currentStep).style.display = 'block';
+
+        function nextStep(step) {
+            document.getElementById('step' + currentStep).style.display = 'none';
+            currentStep = step;
+            document.getElementById('step' + currentStep).style.display = 'block';
+        }
+
+        function finishTutorial() {
+            document.getElementById('step' + currentStep).style.display = 'none';
+            document.getElementById('finish').style.display = 'block';
+        }
+
+        function restartTutorial() {
+            document.getElementById('finish').style.display = 'none';
+            currentStep = 1;
+            document.getElementById('step' + currentStep).style.display = 'block';
+        }
+    </script> 
+</body>
+</html>
