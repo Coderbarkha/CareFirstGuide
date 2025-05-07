@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burns Tutorial</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.step {
+  display: none;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+  overflow: hidden; /* ensures no content overflows */
+  position: relative; /* ensures z-index works */
+}
+
+.step img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto 10px auto; /* add bottom margin so button doesn't go under */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.step button {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+img {
+    width: 40%;
+    height: 40%;
+    margin-top: 10px;
+}
+
+#finish {
+    display: none;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Burns Tutorial</h1>
+        <div class="step" id="step1">
+            <h2>Step 1: Assess the Burn</h2>
+            
+            <p>Check the severity of the burn. If it's a third-degree burn, seek immediate medical attention.</p>
+            <img src="images/burnstep1.jpeg" alt="Assess the Burn">
+            <button onclick="nextStep(2)">Next Step</button>
+        </div>
+
+        <div class="step" id="step2">
+            <h2>Step 2: Cool the Burn</h2>
+           
+            <p>Run cool (not cold) water over the burn for at least 10 minutes.</p>
+            <img src="images/burnstep2.jpeg" alt="Cool the Burn">
+            <button onclick="nextStep(3)">Next Step</button>
+        </div>
+
+        <div class="step" id="step3">
+            <h2>Step 3: Cover the Burn</h2>
+            
+            <p>Cover the burn with a sterile, non-stick bandage.</p>
+            <img src="images/burnstep3.jpeg" alt="Cover the Burn">
+            <button onclick="finishTutorial()">Finish</button>
+        </div>
+
+        <div class="step" id="finish">
+            <h2>🎉 Congratulations! You have completed the tutorial.</h2>
+            <button onclick="restartTutorial()">Restart Tutorial</button>
+          </div>
+
+                 <!-- Video Section -->
+<section class="video-section">
+    <h2>Watch: Burns first aid in </h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/znGl4ljKMIo?si=uKMT7Xl60eYd6Zjr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </section>
+    </div>
+    </div>
+    <script>
+        let currentStep = 1;
+
+        function nextStep(step) {
+    // Hide the current step
+    document.getElementById('step' + currentStep).style.display = 'none';
+    currentStep = step;
+
+    // Show the next step
+    document.getElementById('step' + step).style.display = 'block';
+}
+
+function finishTutorial() {
+    document.getElementById('step' + currentStep).style.display = 'none';
+    document.getElementById('finish').style.display = 'block';
+}
+
+function restartTutorial() {
+            document.getElementById('finish').style.display = 'none';
+            currentStep = 1;
+            document.getElementById('step' + currentStep).style.display = 'block';
+        }
+
+// Initially, show the first step
+document.getElementById('step1').style.display = 'block';
+
+    </script>
+
+</body>
+</html>
