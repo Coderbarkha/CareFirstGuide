@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Aid Tutorial - CPR</title>
+    
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.step {
+  display: none;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+  overflow: hidden; /* ensures no content overflows */
+  position: relative; /* ensures z-index works */
+}
+
+.step img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto 10px auto; /* add bottom margin so button doesn't go under */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.step button {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+img {
+    width: 40%;
+    height: 40%;
+    margin-top: 10px;
+}
+
+#finish {
+    display: none;
+}
+</style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1>First Aid Tutorial: How to Perform CPR</h1>
+
+        <div id="step1" class="step">
+            <h2>Step 1: Check for responsiveness</h2>
+            <p>Tap on the person’s shoulder and shout, “Are you okay?” to check if they respond.</p>
+            <img src="images/cprstep1.jpeg" alt="Step 1 Image">
+            <button onclick="nextStep('step2')">Next</button>
+        </div>
+
+        <div id="step2" class="step">
+            <h2>Step 2: Call for Help</h2>
+            <p>If there is no response, call emergency services immediately.</p>
+            <img src="images/cprstep2.jpeg" alt="Step 2 Image">
+            <button onclick="nextStep('step3')">Next</button>
+        </div>
+
+        <div id="step3" class="step">
+            <h2>Step 3: Start Chest Compressions</h2>
+            <p>Place your hands in the center of the chest and push hard and fast, at least 2 inches deep, at a rate of 100-120 compressions per minute.</p>
+            <img src="images/cprstep3.jpeg" alt="Step 3 Image">
+            <button onclick="nextStep('step4')">Next</button>
+        </div>
+
+        <div id="step4" class="step">
+            <h2>Step 4: Continue CPR</h2>
+            <p>Continue CPR until emergency responders arrive or the person starts breathing.</p>
+            <img src="images/cprstep4.jpeg" alt="Step 4 Image">
+            <button onclick="finishTutorial()">Finish</button>
+        </div>
+
+        <div id="finish" class="step">
+            <h2>Well Done!</h2>
+            <p>You've completed the CPR tutorial. Stay prepared and be safe.</p>
+        </div>
+
+        <!-- Video Section -->
+<section class="video-section">
+    <h2>Watch: CPR in Action</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DUaxt8OlT3o?si=gewsN1tVx-GAOxPi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        let currentStep = 1;
+
+function nextStep(step) {
+    // Hide the current step
+    document.getElementById('step' + currentStep).style.display = 'none';
+    currentStep++;
+
+    // Show the next step
+    document.getElementById(step).style.display = 'block';
+}
+
+function finishTutorial() {
+    document.getElementById('step4').style.display = 'none';
+    document.getElementById('finish').style.display = 'block';
+}
+
+// Initially, show the first step
+document.getElementById('step1').style.display = 'block';
+
+    </script>
+</body>
+</html>
