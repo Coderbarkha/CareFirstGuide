@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprains Tutorial</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.step {
+  display: none;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+  overflow: hidden; /* ensures no content overflows */
+  position: relative; /* ensures z-index works */
+}
+
+.step img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto 10px auto; /* add bottom margin so button doesn't go under */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.step button {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+img {
+    width: 40%;
+    height: 40%;
+    margin-top: 10px;
+}
+
+#finish {
+    display: none;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sprains First Aid Tutorial</h1>
+        <div id="step1" class="step">
+            <h2>Step 1: Assess the Injury</h2>
+            <p>Check the injured area for swelling, bruising, or deformity.</p>
+            <img src="images/sprainstep1.jpeg" alt="Assessing the Injury">
+            <button onclick="nextStep(2)">Next Step</button>
+        </div>
+        <div id="step2" class="step">
+            <h2>Step 2: Apply Ice</h2>
+            <p>Apply ice to the injured area for 15-20 minutes every hour.</p>
+            <img src="images/sprainstep2.jpeg" alt="Applying Ice">
+            <button onclick="nextStep(3)">Next Step</button>
+        </div>
+        <div id="step3" class="step">
+            <h2>Step 3: Compression</h2>
+            <p>Wrap the injured area with an elastic bandage to reduce swelling.</p>
+            <img src="images/sprainstep3.jpeg" alt="Compression">
+            <button onclick="nextStep(4)">Next Step</button>
+        </div>
+        <div id="step4" class="step">
+            <h2>Step 4: Elevation</h2>
+            <p>Keep the injured area elevated above the level of the heart.</p>
+            <img src="images/sprainstep4.jpeg" alt="Elevation">
+            <button onclick="finishTutorial()">Finish</button>
+        </div>
+        <div id="finish" class="step">
+            <h2>Congratulations!</h2>
+            <p>You have completed the sprains first aid tutorial.</p>
+            <button onclick="restartTutorial()">Restart Tutorial</button>
+        </div>
+
+
+
+    
+                 <!-- Video Section -->
+<section class="video-section">
+    <h2>Watch: Burns first aid in </h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/BZMD3cfyjVI?si=XHATyexVKDXABjOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    </div>
+    <script>
+        let currentStep = 1;
+
+        function nextStep(step) {
+    // Hide the current step
+    document.getElementById('step' + currentStep).style.display = 'none';
+    currentStep = step;
+
+    // Show the next step
+    document.getElementById('step' + step).style.display = 'block';
+}
+
+function finishTutorial() {
+    document.getElementById('step' + currentStep).style.display = 'none';
+    document.getElementById('finish').style.display = 'block';
+}
+
+function restartTutorial() {
+            document.getElementById('finish').style.display = 'none';
+            currentStep = 1;
+            document.getElementById('step' + currentStep).style.display = 'block';
+        }
+
+// Initially, show the first step
+document.getElementById('step1').style.display = 'block';
+
+    </script>
+
+</body>
+</html>
