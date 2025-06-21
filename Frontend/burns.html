@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burns</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+           .learn-more-section img{
+        width: 400px;
+        height: 300px;
+        max-width: 600px;
+        display: block;
+        margin: 0 auto;
+     }   
+     /* COMMON BUTTON STYLE (for tutorial and back buttons) */
+button,
+.back-to-top a {
+  display: inline-block;
+  background-color: #2b7a78;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  max-width: 220px;
+}
+
+/* Hover effect for all buttons */
+button:hover,
+.back-to-top a:hover {
+  background-color: #3aafa9;
+  color: white;
+}
+
+/* Center these buttons */
+.tutorial,
+.back-to-top {
+  text-align: center;
+}
+
+/* EMERGENCY BUTTON STYLE */
+a.emergency-call-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #ff4d4d; /* bright red */
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+}
+
+/* Emergency button hover effect */
+a.emergency-call-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+      </style>
+    </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -26,6 +91,7 @@
     </div>
   </header>
     <section class="learn-more-section" id="burns">
+        <img src="images/burns.jfif" alt="Burns">
         <h2>🔥 How to Treat Burns Safely</h2>
         
         <div class="intro">
@@ -60,11 +126,19 @@
           </ul>
         </div>
 
-    </section>
-        <div class="back-to-top">
-            <a href="#top">Back to Top</a>
+        <div class="tutorial">
+          <h3>Watch the Burns first aid Tutorial</h3>
+          <button onclick="window.location.href='burnstutorial.html'">View Tutorial</button>
         </div>
 
+    </section>
+    <div class="back-to-top">
+      <a href="categories.html">Back to Categories</a>
+  </div>
+    <!-- Emergency Call Button -->
+    <a href="tel:112" class="emergency-call-btn" title="Call Emergency Services">
+      📞 Call Emergency
+    </a>
 
          <!-- Footer -->
   <footer class="footer">
