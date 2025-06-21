@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bleeding tutorial</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
         body {
     font-family: Arial, sans-serif;
@@ -22,6 +21,196 @@
 
 h1 {
     color: #333;
+}
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b7a78;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #d4ffd4;
+  }
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .auth-buttons .btn {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    background-color: #2b7a78;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .auth-buttons .signup {
+    background-color: white;
+    color: #2b7a78;
+  }
+  
+  .auth-buttons .btn:hover {
+    background-color: #3aafa9;
+    color: white;
+  }
+  /* Footer Styling */
+.footer {
+  background-color: #3aafa9;
+  color: white;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  width: 30%;
+  padding: 10px;
+}
+
+.footer-left p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-middle h4,
+.footer-right h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-middle ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-middle ul li a:hover {
+  color: #2b7a78;
+}
+
+.footer-right .social-icons a {
+  display: inline-block;
+  margin: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-right .social-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-right .social-icons a:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+.footer-right p,
+.footer-right a {
+  font-size: 1rem;
+  opacity: 0.9;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  color: #2b7a78;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    width: 100%;
+  }
+}
+/* EMERGENCY BUTTON STYLE */
+a.emergency-call-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #ff4d4d; /* bright red */
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+}
+
+/* Emergency button hover effect */
+a.emergency-call-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
 }
 
 .step {
@@ -81,7 +270,26 @@ img {
     </style>
 </head>
 <body>
- 
+        <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/carefirstguide.jpeg" alt="Care First Guide Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="numbers.html">Numbers</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn">LogOut</a>
+    </div>
+  </header>
+
     <div class="container">
         <h1>Bleeding Tutorial</h1>
         <div class="step" id="step1">
@@ -121,6 +329,40 @@ img {
     </div>
           
     </div>
+    <!-- Emergency Call Button -->
+<a href="tel:112" class="emergency-call-btn" title="Call Emergency Services">
+  📞 Call Emergency
+</a>
+        <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <p>&copy; 2023 Care First Guide. All rights reserved.</p>
+        <p>Providing expert first aid information and resources.</p>
+      </div>
+      <div class="footer-middle">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <h4>Stay Connected</h4>
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <h5>Contact Us:</h5>
+        <p>Email: <a href="mailto:info@carefirstguide.com">info@carefirstguide.com</a></p>
+        <p>Phone: +1 (234) 567-890</p>
+      </div>
+    </div>
+  </footer>
     <script>
         let currentStep = 1;
         document.getElementById('step' + currentStep).style.display = 'block';
