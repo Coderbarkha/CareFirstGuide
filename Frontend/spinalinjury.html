@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinal Injury</title>
+        <link rel="stylesheet" href="style.css">
+    <style>
+    .learn-more-section img{
+        width: 400px;
+        height: 300px;
+        max-width: 600px;
+        display: block;
+        margin: 0 auto;
+     }   
+     /* COMMON BUTTON STYLE (for tutorial and back buttons) */
+button,
+.back-to-top a {
+  display: inline-block;
+  background-color: #2b7a78;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  max-width: 220px;
+}
+
+/* Hover effect for all buttons */
+button:hover,
+.back-to-top a:hover {
+  background-color: #3aafa9;
+  color: white;
+}
+
+/* Center these buttons */
+.tutorial,
+.back-to-top {
+  text-align: center;
+}
+
+/* EMERGENCY BUTTON STYLE */
+a.emergency-call-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #ff4d4d; /* bright red */
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+}
+
+/* Emergency button hover effect */
+a.emergency-call-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/carefirstguide.jpeg" alt="Care First Guide Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="numbers.html">Numbers</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn">LogOut</a>
+            </div>
+        </div>
+    </header>
+    <section class="learn-more-section">
+        <img src="images/spinal.jpg" alt="spinalinjury">
+        <h2>🩹 How to Handle Spinal Injury Emergencies</h2>
+        <div class="intro">
+            <p>A spinal injury can be life-threatening and requires immediate attention. It is crucial to handle it with care.</p>
+        </div>
+        <div class="signs-symptoms">
+            <h3>Signs and Symptoms</h3>
+            <ul>
+                <li>Pain or tenderness in the back or neck</li>
+                <li>Numbness or tingling in the limbs</li>
+                <li>Weakness or paralysis</li>
+                <li>Loss of bladder or bowel control</li>
+            </ul>
+        </div>
+        <div class="first-aid-steps">
+            <h3>First Aid Steps</h3>
+            <ol>
+                <li>Do not move the person unless they are in immediate danger.</li>
+                <li>Call emergency services immediately.</li>
+                <li>If trained, stabilize the head and neck.</li>
+                <li>Monitor breathing and pulse until help arrives.</li>
+            </ol>
+        </div>
+        <div class="when-to-seek-help">
+            <h3>When to Seek Medical Help</h3>
+            <ul>
+                <li>If there is severe pain or swelling.</li>
+                <li>If there is loss of sensation or movement.</li>
+                <li>If there are signs of shock (pale skin, rapid pulse).</li>
+            </ul>
+        </div>
+    </section>
+    <div class="tutorial">
+          <h3>Watch the Spinal Injury first aid Tutorial</h3>
+          <button onclick="window.location.href='spinaltutorial.html'">View Tutorial</button>
+      </div>
+    <div class="back-to-top">
+        <a href="categories.html">Back to Categories</a>
+    </div>
+        <!-- Emergency Call Button -->
+<a href="tel:112" class="emergency-call-btn" title="Call Emergency Services">
+    📞 Call Emergency
+  </a>
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+        <!-- Left Section: Copyright & Info -->
+        <div class="footer-left">
+            <p>&copy; 2023 Care First Guide. All rights reserved.</p>
+            <p>Providing expert first aid information and resources.</p>
+        </div>
+        
+        <!-- Middle Section: Quick Links -->
+        <div class="footer-middle">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Right Section: Social Icons and Contact Info -->
+        <div class="footer-right">
+            <h4>Stay Connected</h4>
+            <div class="social-icons">
+                <a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="images/linkedin.png" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <h5>Contact Us:</h5>
+            <p>Email: <a href="mailto:info@carefirstguide.com">info@carefirstguide.com</a></p>
+            <p>Phone: +1 (234) 567-890</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
