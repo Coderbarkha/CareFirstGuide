@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ear Bleeding  Tutorial</title>
+ <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b7a78;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #d4ffd4;
+  }
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .auth-buttons .btn {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    background-color: #2b7a78;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .auth-buttons .signup {
+    background-color: white;
+    color: #2b7a78;
+  }
+  
+  .auth-buttons .btn:hover {
+    background-color: #3aafa9;
+    color: white;
+  }
+  /* Footer Styling */
+.footer {
+  background-color: #3aafa9;
+  color: white;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  width: 30%;
+  padding: 10px;
+}
+
+.footer-left p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-middle h4,
+.footer-right h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-middle ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-middle ul li a:hover {
+  color: #2b7a78;
+}
+
+.footer-right .social-icons a {
+  display: inline-block;
+  margin: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-right .social-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-right .social-icons a:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+.footer-right p,
+.footer-right a {
+  font-size: 1rem;
+  opacity: 0.9;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  color: #2b7a78;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    width: 100%;
+  }
+}
+/* EMERGENCY BUTTON STYLE */
+a.emergency-call-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #ff4d4d; /* bright red */
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+}
+
+/* Emergency button hover effect */
+a.emergency-call-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+.step {
+  display: none;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+  overflow: hidden; /* ensures no content overflows */
+  position: relative; /* ensures z-index works */
+}
+
+.step img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto 10px auto; /* add bottom margin so button doesn't go under */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.step button {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+img {
+    width: 40%;
+    height: 40%;
+    margin-top: 10px;
+}
+
+#finish {
+    display: none;
+}
+.video-section {
+    margin: 50px auto;
+    text-align: center;
+}
+
+
+
+
+</style>
+</head>
+<body>
+                           <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/carefirstguide.jpeg" alt="Care First Guide Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="numbers.html">Numbers</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn">LogOut</a>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Muscle Cramp Tutorial</h1>
+    <div class="step" id="step1">
+      <h2>Step 1: Identify the Cramp</h2>
+      <p>Muscle cramps are sudden, involuntary contractions of one or more muscles. They can occur in any muscle but are most common in the legs.</p>
+      <img src="images/musclestep1.jpeg" alt="Identifying Muscle Cramps">
+      <button onclick="nextStep(2)">Next Step</button>
+      </div>
+    <div class="step" id="step2">
+      <h2>Step 2: Stop Activity</h2>
+      <p>If you experience a muscle cramp, stop the activity immediately to prevent further injury.</p>
+      <img src="images/musclestep2.jpeg" alt="Stopping Activity">
+      <button onclick="nextStep(3)">Next Step</button>
+      </div>
+    <div class="step" id="step3">
+      <h2>Step 3: Stretch the Affected Muscle</h2>
+      <p>Gently stretch the affected muscle to relieve the cramp. For example, if it's a calf cramp, try pulling your toes towards you while keeping your leg straight.</p>
+      <img src="images/musclestep3.jpeg" alt="Stretching the Affected Muscle">
+      <button onclick="nextStep(4)">Next Step</button>
+      </div>
+    <div class="step" id="step4">
+        <h2>Step 4: Apply Heat or Cold</h2>
+        <p>Apply a warm compress or heating pad to the cramped muscle to help relax it. Alternatively, you can use an ice pack to reduce pain and swelling.</p>
+        <img src="images/musclestep4.jpeg" alt="Applying Heat or Cold">
+        <button onclick="nextStep(5)">Next Step</button>
+        </div>
+    <div class="step" id="step5">
+      <h2>Step 5: Hydrate</h2>
+      <p>Drink plenty of fluids, especially if the cramp is due to dehydration. Electrolyte drinks can also help replenish lost minerals.</p>
+      <img src="images/musclestep5.jpeg" alt="Hydrating">
+      <button onclick="nextStep(6)">Next Step</button>  
+        </div>
+    <div class="step" id="step6">
+        <h2>Step 6: Rest and Recover</h2>
+        <p>After the cramp has subsided, rest the affected muscle and avoid strenuous activities for a while to allow it to recover.</p>
+        <img src="images/musclestep6.jpeg" alt="Resting and Recovering">
+        <button onclick="finishTutorial()">Finish</button>
+        </div>
+    <div id="finish">
+        <h2>Congratulations!</h2>
+        <p>You have completed the Muscle Cramp First Aid Tutorial. Remember to always listen to your body and seek medical help if cramps persist or worsen.</p>
+        <img src="images/muscle_cramp_finish.jpg" alt="Tutorial Completed">
+        <button onclick="restartTutorial()">Restart Tutorial</button>
+        </div>
+
+  </div>
+  <div class="video-section">
+    <h2>Watch: Muscle Cramps first aid in </h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/mk5WP40NQ9A?si=rs4i6uXjFk-N3fMF"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+      <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+        <!-- Left Section: Copyright & Info -->
+        <div class="footer-left">
+            <p>&copy; 2023 Care First Guide. All rights reserved.</p>
+            <p>Providing expert first aid information and resources.</p>
+        </div>
+        
+        <!-- Middle Section: Quick Links -->
+        <div class="footer-middle">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Right Section: Social Icons and Contact Info -->
+        <div class="footer-right">
+            <h4>Stay Connected</h4>
+            <div class="social-icons">
+                <a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="images/linkedin.png" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <h5>Contact Us:</h5>
+            <p>Email: <a href="mailto:info@carefirstguide.com">info@carefirstguide.com</a></p>
+            <p>Phone: +1 (234) 567-890</p>
+        </div>
+    </div>
+</footer>
+<script>
+    let currentStep = 1;
+    const totalSteps = 6;
+
+    function nextStep(step) {
+        document.getElementById(`step${currentStep}`).style.display = 'none';
+        currentStep = step;
+        document.getElementById(`step${currentStep}`).style.display = 'block';
+
+        if (currentStep === totalSteps) {
+            document.getElementById('finish').style.display = 'block';
+        }
+    }
+
+    function finishTutorial() {
+        document.querySelector('.container').innerHTML = '<h2>Thank you for completing the tutorial!</h2>';
+    }
+
+    function restartTutorial() {
+        currentStep = 1;
+        document.querySelectorAll('.step').forEach(step => step.style.display = 'none');
+        document.getElementById('finish').style.display = 'none';
+        document.getElementById('step1').style.display = 'block';
+    }
+
+    // Start with the first step visible
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('step1').style.display = 'block';
+    });
+</script>
+</body>
+</html>
